@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d0d0e;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.product-card {
+  background: #1a1a1d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #2a2a2e;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(100, 80, 255, 0.2);
+  border-color: #6450ff;
+}
+
+.product-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #8a7dff;
+}
+
+.product-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  background: #1a1a1d;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2a2a2e;
+}
+
+.product-detail-image {
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-detail-info h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.product-detail-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8a7dff;
+  margin-bottom: 30px;
+}
+
+.product-detail-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #b0b0b5;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background: #6450ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background: #8a7dff;
+}
+
+.header {
+  background: #1a1a1d;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px 0;
+  border-bottom: 1px solid #2a2a2e;
+}
+
+.header h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.navigation {
+  background: #1a1a1d;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  padding: 1rem 0;
+  border-bottom: 3px solid #6450ff;
+}
+
+.navigation .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation h1 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  background: #2a2a2e;
+  color: #e8e8e8;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover,
+.nav-button.active {
+  background: #6450ff;
+  color: white;
+}
+
+.page-header {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: #b0b0b5;
+}
+
+.countries-grid,
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.country-card,
+.city-card {
+  background: #1a1a1d;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #2a2a2e;
+}
+
+.country-card:hover,
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(100, 80, 255, 0.2);
+  border-color: #6450ff;
+}
+
+.country-name,
+.city-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.country-language,
+.city-stats {
+  color: #b0b0b5;
+  margin-bottom: 0.5rem;
+}
+
+.country-stats,
+.city-year {
+  font-weight: 600;
+  color: #8a7dff;
+}
+
+.cities-count {
+  color: #8a8a93;
+  font-size: 0.9rem;
+}
+
+.country-detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.country-header {
+  background: #1a1a1d;
+  border-radius: 16px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2a2a2e;
+}
+
+.country-header h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.country-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat {
+  text-align: center;
+  padding: 1.5rem;
+  background: #2a2a2e;
+  border-radius: 12px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #8a8a93;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #8a7dff;
+}
+
+.cities-section h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.city-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.city-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.city-header h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.city-country {
+  font-size: 1.2rem;
+  color: #b0b0b5;
+}
+
+.city-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.city-stat {
+  background: #1a1a1d;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 1px solid #2a2a2e;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs .back-button {
+  padding: 0.5rem 1rem;
+}
+
+.country-link {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .navigation .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .country-stats,
+  .city-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .country-header,
+  .city-stat {
+    padding: 1.5rem;
+  }
+}
